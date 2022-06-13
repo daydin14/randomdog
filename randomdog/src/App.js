@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import {useState, useEffect} from "react";
+
 import './App.css';
 
 function App() {
+
+  const apiKey = "https://dog.ceo/api/breeds/image/random";
+  const [dog, setDog] = useState(null);
+  const getDog = async () => {
+    const response = await fetch(`${apiKey}`);
+    const dogData = await response.json();
+    setDog(dogData);
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App"></div>
   );
 }
 
