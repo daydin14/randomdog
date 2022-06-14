@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 function Button({ dog }) {
-  const [dogData, setDogData] = useState({});
+  const [dogData, setDogData] = useState({
+    searchDog: "",
+  });
 
   const handleChange = (event) => {
     setDogData({ ...dogData, [event.target.message]: event.target.value });
@@ -9,13 +11,18 @@ function Button({ dog }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dog(dogData.useState());
+    dog(dogData.searchDog);
   };
 
   return (
     <div>
-      <button onClick={handleSubmit}>
-        <input type="text" onChange={handleChange} value={dogData.useState()} />
+      <button onSubmit={handleSubmit}>
+        <input
+          type="submit"
+          name="searchDog"
+          onChange={handleChange}
+          value="Random Dog"
+        />
       </button>
     </div>
   );
