@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import DogDisplay from "./components/RandomDogDisplay";
 import "./App.css";
 
 function App() {
