@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Button from "./components/Button";
 import DogDisplay from "./components/RandomDogDisplay";
 import "./App.css";
 
@@ -18,7 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <Button />
+      <DogDisplay />
     </div>
   );
 }
