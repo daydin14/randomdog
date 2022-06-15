@@ -5,10 +5,6 @@ function Button({ dog }) {
     searchDog: "",
   });
 
-  const handleChange = (event) => {
-    setDogData({ ...dogData, [event.target.message]: event.target.value });
-  };
-
   const handleClick = (event) => {
     event.preventDefault();
     dog(dogData.searchDog);
@@ -16,14 +12,7 @@ function Button({ dog }) {
 
   return (
     <div>
-      <button onClick={handleClick}>
-        <input
-          type="button"
-          name="searchDog"
-          onChange={handleChange}
-          value="Random Dog"
-        />
-      </button>
+      <button onClick={handleClick}>Get Random Dog</button>
     </div>
   );
 }
