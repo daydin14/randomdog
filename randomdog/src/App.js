@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <Button />
-      <DogDisplay />
+      <Button dog={getDog}/>
+      <DogDisplay dog={dog}/>
     </div>
   );
 }

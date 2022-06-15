@@ -2,7 +2,7 @@ function DogDisplay({ dog }) {
   const loaded = () => {
     return (
       <div>
-        <img src={dog.message} alt="Dog" />
+        <img src={dog.message} alt="Dog" width="150px" /><br/>
       </div>
     );
   };
